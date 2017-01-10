@@ -1,0 +1,36 @@
+/* CSS Document */
+
+.articleContent{
+	font-family: 'Oswald', sans-serif;
+	font-size:16px;
+	}
+
+._links{
+	text-decoration: line-through;
+	-webkit-transition:all 5s ease-in-out;
+	transition:all 5s ease-in-out;
+	color:rgba(228,220,220,1.00);
+
+}
+
+._links:hover{
+	text-decoration:underline;
+	
+}
+
+._article{
+	font-size:15px;
+	width:50%;
+	text-align:left;
+	margin:0;
+}
+
+
+
+._article h4, .article_ h4{
+	font-size:19px;
+}
+
+._bottomNavlinks{
+	color:rgba(255,255,220,1.00);
+}
