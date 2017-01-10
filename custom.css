@@ -1,0 +1,36 @@
+/* CSS Document 
+font-family: 'Oswald', sans-serif;
+
+*/
+
+
+
+.main_body p, .main_body ul li{font-family: 'Raleway', sans-serif;}
+
+.main_top h1{
+	font-weight:900;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:rgba(6,30,53,1.00); 
+	margin:0;
+}
+h1{margin:0}
+
+p, li{ 
+	font-size:16px; 
+	color:rgba(6,30,53,1.00);
+}
+
+a{
+	text-decoration:none;
+	color:rgba(6,30,53,1.00);
+	transition: all ease-in-out 500ms;
+}
+a:hover{
+	color:rgba(101,169,237,1.00);
+}
+.p-head h1, .main_body ul{
+	text-align:center;
+}
+.popover-title{
+	font-size:16px
+}
