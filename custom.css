@@ -5,7 +5,7 @@ font-family: 'Oswald', sans-serif;
 
 
 
-.main_body p, .main_body ul li{font-family: 'Raleway', sans-serif;}
+.main_body p, .main_body ul li{font-family: 'Raleway', sans-serif; font-weight:600;}
 
 .main_top h1{
 	font-weight:900;
