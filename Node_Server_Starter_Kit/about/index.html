@@ -25,14 +25,14 @@ body {
         <div class="subText">Edtis Technologies</div>
     </div>
     <div id="bar">
-        <div class="menuLink"><a href="../index.html">Home</a></div>
-        <div class="menuLink active"><a href="../index.html">About</a></div>
-        <div class="menuLink"><a href="../index.html">Production</a></div>
+        <div class="menuLink"><a href="../index.html">Start</a></div>
+        <div class="menuLink active"><a href="./">About</a></div>
+        <div class="menuLink"><a href="../production/">Production</a></div>
 
     </div>
     <div id="pageContent">
     
-    <div class="articleTitle">Production Boiler</div>      
+    <div class="articleTitle">Production Boilerplate</div>      
         
       <div class="articleContent">
       
@@ -46,10 +46,12 @@ body {
                 
 				</p>
         </div>
-	<p>Production <a href="http://whatis.techtarget.com/definition/boilerplate" class="_links" title="Click to learn more"> boilerplate </a> to start developing react components (with <a href="https://webpack.github.io/" class="_links">WebPack</a>).</p>
+	<p>Production <a href="http://whatis.techtarget.com/definition/boilerplate" class="_links" title="Click to learn more"> boilerplate </a> to start developing React components (with <a href="https://webpack.github.io/" class="_links">WebPack</a>).</p>
 	<b>Bonus:</b>
-	Use ES6 or regular javascript.
-	  <br />
+	Use ES6 or regular javascript.<br>
+
+	<b>Bonus:</b>
+	 Bootstrap 3 and Jquery included.
 	  <p>Ready for small to medium production app.</p>
 	  <br>
 
@@ -90,31 +92,71 @@ body {
 
 		<div class="_article">
 		<h4>500 Error handler <i class="fa fa-reply" aria-hidden="true"></i></h4>
-		<p>Internal server errors happen all the time and you need a function to catch it.  There are a wide range of internal server errors that can occur.  
-		For example if you a route for a particular web page and the web page happened to be deleted accidentally during your last edit then your server will generate a 500 error.  There are many other cases of <br>
-		<br>
-		<img src="../imgs/404img.png" alt="code">
-		If you need a design template for a 404 page then check out some of our (pre-made) designs for 404 pages <a href="" class="_links">here</a>.</p>
+		<p>Internal server errors happen all the time and you need a function to catch it.  Keep in mind that there are a wide range of internal server errors that can occur and there are a number of reasons why they occur (from poor code in your app, to bad code on your server, or even missing files).  
+		For example if you have a route and you accidentally deleted the webpage to be served with that route then your server will generate a 500 error. <br>
+<br>
+ 
+		Inside of the 500 error handler you can choose to do a number of things such as retrieve information from a database or close connections.  The most common thing to do is serve up a webpage letting the user know that your server is under some sort of maintenance.
+		<br><br>
+
+		<img src="../imgs/500codesnippet.png" alt="code" width="600">
+		If you need a design template for a 500 page then check out some of our (pre-made) designs for 500 pages <a href="" class="_links">here</a>.</p>
 		</div>
 		<br>
 		<br>
 		<h3>Routes directory  <i class="fa fa-reply" aria-hidden="true"></i></h3>
-		<p>EJS will help you transfer dynamic data in to your html code from your node server [Server to client].<br></p>
+		<p>Independent routes directory so you can organize your code neater.<br></p>
 		<small><a href="http://www.embeddedjs.com/" class="_links">Learn More...</a></small>
 		<br>
 		<br>
 		<div class="_article">
-		<h4>UncaughtException Error Handler <i class="fa fa-reply" aria-hidden="true"></i></h4>
-		<p>If a user tries to access a page that is not on the server your 404 error handler will catch it and you can serve up a webpage to display.
-		The 404 error handler is simply a function and in that function you can do things (whatever you like) such as (but not limited too) server a 404 page.<br>
+		<h4>UncaughtException Error Handler <i class="fa fa-reply" aria-hidden="true"></i>
+		</h4>
+		<p>One thing about Node apps is that Node has a tendecy for crashing due to several things such as loss of memory or memory leaks, 
+		or bandwith issues etc. Many of these errors are not accounted for in the code (mainly because it would be a lot of code to write) and therefore we must set whats called an <br>
+UN-CAUGHT-EXCEPPTION error handler. <br>
+ This will handle all the un-caught errors.   <br>
+<br>
+
+		For much of these errors the only thing that can possibly cure the problem is a restart of the app.  This is where your 
+		Process Manager comes in (such as PM2 or Forever).  However if your app crashes you still want to try to gracefully shutdown the Node server.      
 		<br>
-		<img src="../imgs/404img.png" alt="code">
-		If you need a design template for a 404 page then check out some of our (pre-made) designs for 404 pages <a href="" class="_links">here</a>.</p>
+		<br>
+
+		
+		<img src="../imgs/uncaughtexception.png" width="400" alt="code">
+		<br>
+		<br>
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		Gracefully shutting down Node is important so you can free up memory and the port on which Node was started.  If your app doesn't gracefully shutdown it can hang on the port which will make you have to manually change the port number in the code. The uncaughtException Error Handler must be the last function in the script. <br>
+<br>
+Keep in mind, when uncaughtException Errors happen your server is still live and able to do things (such as gracefully shutdown Node).		
+		Depending on what caused the error you should be able to manipulate Node and then shutdown. <br><br>
+
+For Production Node Servers go to <a href="https://www.a2hosting.com/nodejs-hosting?aid=31fc189a&amp;bid=fabcef65" class="_links">A2 Hosting</a>. 
+		<br>
+		</p>
 		</div>
+		<br>
+
 		<hr>
 		<br>
 
-		<div class="_article">
+		<div class="_article" style="width:100%">
+		<aside style="float:left;">
 		<p></p>
 			Whats Next?
 		<ul>
@@ -122,7 +164,10 @@ body {
 			<li><a href="" class="_bottomNavlinks">How do I run my app in PRODUCTION mode?</a></li>
 			<li><a href="" class="_bottomNavlinks">Download Start Kit</a></li>
 		</ul>
-		
+		</aside>
+		<!--<aside style="float:left;margin-left:40px">
+		<a href="https://m.do.co/c/64da4898f8c2" target="_top"><img src="../imgs/digital-ocean.jpg" alt="Digital Ocean" width="250" height="90" /></a>
+		</aside>/**/-->
 		</div>
 		
 	</div>
