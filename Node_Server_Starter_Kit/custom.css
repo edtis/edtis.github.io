@@ -34,3 +34,49 @@
 ._bottomNavlinks{
 	color:rgba(255,255,220,1.00);
 }
+.stars{
+	font-size: 18px
+}
+.env_variable_chart{
+	display: inline-block;
+	width: 40%;
+	border: 1px solid black;
+	
+	
+}
+.env_variable_chart p{
+	text-align: center;
+}
+
+.env_variable_chart img{
+	width: 90%;
+	margin-left: 10px;
+}
+._indent{
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

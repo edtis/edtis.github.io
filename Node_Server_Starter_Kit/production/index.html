@@ -4,9 +4,11 @@
 <head>
 	<title>Node Server Starter Kit</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../asubtlebeige.css" />
 	<link rel="stylesheet" type="text/css" href="../custom.css" />
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	
 <style type="text/css">
 <!--
 body {
@@ -48,11 +50,9 @@ body {
 	
 	<ol>
 		<li>Compress Your </li>
-		<li>Make sure your server is in Production Mode [and if not change it]</li>
+		<li>Put your app in to Production Mode</li>
 		<li>Use a server Process Manager</li>
-		<li>Cluster your App instances
-			
-		</li>
+		<li>Cluster your App instances</li>
 		
 
 		<li>Enjoy your app</li>
@@ -60,27 +60,107 @@ body {
 	</ol>
 	<br>
 	<hr>
-	<div class="articleTitle">Start Server with WebPack Watch?</div>
-          
-	  <p>WebPack can compile your REACTjs files automatically everytime you SAVE them. This can save a lot of time during the development of your app. If you would like WebPack to watch your files then start your server like this:</p>
-	  <ol>
-		<li>Open a <em style="text-decoration:underline">seperate</em> terminal</li>
-		<li>Navigate to your app directory (folder)</li>
-		<li>Type the following lines of code:
-			<ul>				
-				<li>npm run start&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span style="font-weight:900; font-size:30px">&#8592;</span><span><img src="../imgs/npmrunstartdirection.png" width="400" alt="instruction"></span></li>				
-			</ul>
-		</li>		
-	</ol>
-	  Your Reactjs files will now be automatically compiled by REACTjs each time you SAVE a file.
-	  <br />
+	<div class="_articleFullLength">	
+		<h3>Compress Your App <i class="fa fa-reply" aria-hidden="true"></i></h3>
+			<p>It is important to take the time out to compress your app and clean up your code. This means checking for unnecessary or repetitive code and getting rid of it.<br><br>
+
+			You should also minimize your JavaScript and your CSS.<br><br>
+
+			Luckily there's an easy process to minimize your javascript.  Simply type:
+			<img>
+			<br>
+			Now in order to minimize your CSS you can copy your CSS code and go to: <a href="https://cssminifier.com/">cssminifier.com</a>		
+			</p>
+			<small><a href="https://www.elegantthemes.com/blog/tips-tricks/how-to-minify-your-websites-css-html-javascript" class="_links">Learn More...</a></small>
+			<br>
+			<br>
 	</div>
 
+<!--article-->
+		<div class="_articleFullLength">	
+			<h4>Put your Server in Production Mode <i class="fa fa-reply" aria-hidden="true"></i></h4>
+			<p>
+			By default your server environment variables are not going to be in "production" mode.  This is important because setting your server to be in production mode will allow you to:
+			<ul>
+				<li>Cache your VIEWS</li>
+				<li>Cache your CSS files</li>
+				<li>Generate less verbose errors</li>
+			</ul>
+			Production mode will allow your server to run faster.<br>
+			The process for setting your Nodejs Server environment <br>
+			is quite simple however it varies on different platforms.<br>
+			The steps are below:
+			<ol>
+				<li><b>Set the Environment in Node</b></li>
+				<li><b>Set the Environment in your Process Manager</b></li>
+			</ol><br>
 
-    </div>
+			<div class="_indent">
+			 <h5><span class="stars">&#9734;</span> Set the Environment in Node</h5>
+			<p>Step one to setting your Node environment variable is by doing so in the terminal.</p>
+			<p>Go to your Nodejs terminal and type the following:</p>
+			<div class="env_variable_chart_container">
+				<div class="env_variable_chart chart1">
+					<p>For Windows</p>
+				<img src="../imgs/nodeenvwindows.png" alt="node environment">	
+				</div>
+				<div class="env_variable_chart chart2">					
+					<p>For Mac, Linux, or Other</p>
+					<img src="../imgs/nodeenvexport.png" alt="node environment">
+				</div>				
+			</div>
+			</div>
+			<div class="_indent">
+			<h5><span class="stars">&#9734;</span> Set the Environment in your Process Manager</h5>
+			Step two is setting the Node environment in your process manager.  For the sake of reliablity and ease of use, we're going to be using PM2 process manager (more on this later).
+			<br>
+	Make sure you have pm2 installed:<br>
+			<br>
+			<img src="../imgs/pm2install.png" width="200">
+			<p>Then to get your app started in production mode type:</p>
+			<img src="../imgs/npmRunProductionServer.png" width="35%"><br>
+			Your app is now in production mode.		
 
-</div>
-    <div id="footer"><a href="http://www.edtis.com">License MIT</a></div>
-        
+			
+			</div>
+		
+			<br>		
+			</p>
+			</div>
+		<br>
+<!--article-->
+		<div class="_article">
+			<h4>Use a server Process Manager<i class="fa fa-reply" aria-hidden="true"></i></h4>
+			<p>When your app crashes you will need a Process Manager to restart your app and keep it online. Luckily using a Process Manager is very simple.<br>
+			There are a number of Process Managers that you can use:
+			<ul>
+				<li>PM2 (recommended)</li>
+				<li>Forever</li>
+				<li>StrongLoop</li>
+			</ul>
+			<br>			
+
+			<br><br>
+			</p>
+		</div>
+<!--article-->
+		<div class="_article">
+			<h3>Cluster your App instances  <i class="fa fa-reply" aria-hidden="true"></i></h3>
+			<p>If your server has more than one cpu or core cpu then you can run an instance of your app on each CPU.  This is a great way to scale your app for speed and reliabilty. <br><br>
+			There are two ways you can custer your app:
+			<ul>
+				<li>Use a Process Manager (currently recommended)</li>
+				<li>Use the Cluster function in Nodejs</li>
+			</ul></p>
+			<small><a href="http://www.embeddedjs.com/" class="_links">Learn More...</a></small>
+			<br>
+			<br>
+			
+   		</div>
+   	</div>
+    
+	</div>
+	</div>
+	<div id="footer"><a href="http://www.edtis.com">License MIT</a></div>
 </body>
 </html>
